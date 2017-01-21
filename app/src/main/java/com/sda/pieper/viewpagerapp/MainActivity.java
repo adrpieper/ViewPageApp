@@ -42,6 +42,17 @@ public class MainActivity extends Activity {
             return 3;
         }
 
-
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position){
+                case 0:
+                    return "FirstFragment";
+                case 1:
+                    return "SecondFragment";
+                case 2:
+                    return "ThirdFragment";
+            }
+            throw new RuntimeException("");
+        }
     }
 }
